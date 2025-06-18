@@ -179,8 +179,8 @@ def main():
         process_time = round(loop_end - loop_start, 2)
         logging.debug(f'Processing Time: {process_time} secs')
 
-        #if 'runonce' in locals():
-        sys.exit(0)
+        if 'runonce' in locals():
+            sys.exit(0)
         
         # Sleep until the next scan
         if scan_interval - process_time <= 1:

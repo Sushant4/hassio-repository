@@ -21,6 +21,8 @@ map:
   - share:rw
 options: 
   host: 192.168.1.100
+  model: "SGXXX"
+  serial_number: "XX"
   timeout: 10
   scan_interval: 30
   connection: "modbus"
@@ -29,6 +31,8 @@ options:
   log_console: "INFO"
 schema:
   host: str
+  model: str
+  serial_number: str
   timeout: int(3,60)?
   scan_interval: int(5,600)?
   connection: "list(sungrow|modbus|http)"

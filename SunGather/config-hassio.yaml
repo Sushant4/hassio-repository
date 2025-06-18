@@ -6,6 +6,8 @@ inverter:
   smart_meter: true
   log_console: INFO
   level: 1
+  model: "SGXXX"
+  serial_number: "X123"
   # port: 502
   # timeout: 10
   # retries: 3

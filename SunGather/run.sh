@@ -10,6 +10,8 @@ fi
 
 INVERTER_HOST=$(bashio::config 'host')
 INTERVAL=$(bashio::config 'scan_interval')
+MODEL=$(bashio::config 'model')
+SERIAL_NUMBER=$(bashio::config 'serial_number')
 CONNECTION=$(bashio::config 'connection')
 SMART_METER=$(bashio::config 'smart_meter')
 CUSTOM_MQTT_SERVER=$(bashio::config 'custom_mqtt_server')
@@ -41,6 +43,8 @@ yq -i "
   .inverter.host = \"$INVERTER_HOST\" |
   .inverter.scan_interval = $INTERVAL |
   .inverter.connection = \"$CONNECTION\" |
+  .inverter.model = \"$MODEL\" |
+  .inverter.serial_number = \"$SERIAL_NUMBER\" |
   .inverter.smart_meter = $SMART_METER |
   .inverter.log_console = \"$LOG_CONSOLE\"
 " /share/SunGather/config.yaml

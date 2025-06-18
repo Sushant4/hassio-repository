@@ -10,12 +10,6 @@ import getopt
 import yaml
 import time
 import signal
-# import os
-
-# sys.path.append(os.path.abspath(os.path.join(__file__, "../../../SungrowClient/SungrowClient")))
-
-# import SungrowClient
-
 
 def main():
     configfilename = 'config.yaml'
